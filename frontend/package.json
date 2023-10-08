@@ -13,7 +13,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
+<<<<<<< HEAD
     "react-scripts": "5.0.1",
+=======
+    "react-scripts": "^5.0.1",
+>>>>>>> 6f3343ed6bb9f75f4e4a0986970eaeab9a1b2894
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
