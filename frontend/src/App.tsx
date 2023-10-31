@@ -16,11 +16,8 @@ function App() {
   }
     return (
     <Router>
-        <div className="grid-container" />
-        <link rel="stylesheet" href="style.css" />      
-        <title>Project Vino</title>
-    <body>
-        <div>
+        <div className="App">
+        <div className="grid-container">
             <header className="header">
                 <div className="brand">
                     <button onClick={openMenu}>&#9776;</button>
@@ -33,7 +30,7 @@ function App() {
                         <Link to="/payment">Payment</Link>
                 </div>
             </header>
-            <aside className="sidebar">
+            <div> <aside className="sidebar">
                 <h3>Shopping Categories</h3>
                 <button className="sidebar-close-button" onClick={closeMenu}>x</button>
                 <ul>
@@ -54,11 +51,10 @@ function App() {
                     <Route path="payment" element={<PaymentScreen/>}></Route>      
                 </Routes>
             </main>
-            <footer>
-                &copy; 2023 Project Vino
-            </footer>
+            <footer> &copy; 2023 Project Vino </footer>
         </div>
-    </body>   
+    </div>
+    </div> 
     </Router>
   );
 }
