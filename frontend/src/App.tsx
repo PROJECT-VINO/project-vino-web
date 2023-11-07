@@ -6,6 +6,7 @@ import Home from "./Home/home";
 import Products from "./Products/Products";
 import Orders from './Orders/Orders';
 import PaymentScreen from './Payment/Payment';
+import OrderDetail from './Orders/OrderDetail';
 
 function App() {
   const openMenu = () => {
@@ -48,7 +49,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/catalog" element={<Products/>} /> 
                     <Route path="orders" element={<Orders />}></Route>
-                    
+                    <Route path="/order/:id" element={<OrderDetail />}></Route>
                     <Route path="payment" element={<PaymentScreen/>}></Route>      
                 </Routes>
             </main>
