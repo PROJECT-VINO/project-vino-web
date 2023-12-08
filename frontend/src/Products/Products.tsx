@@ -14,10 +14,11 @@ type Product = {
 
 const emptyProducts: Product[] = [];
 
-const [products, setProducts]: [Product[], (products: Product[]) => void]
-    = useState(emptyProducts);
+
 
 function Products() {
+    const [products, setProducts]: [Product[], (products: Product[]) => void]
+        = useState(emptyProducts);
     return (
         <div className="content">
             <ul className="products">
