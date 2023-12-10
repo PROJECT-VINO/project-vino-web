@@ -47,7 +47,7 @@ function Products() {
     );
     
     useEffect(() => {
-        axios.get<Product[]>("https://localhost:7250/catalog",
+        axios.get<Product[]>("project-vino-api.azurewebsites.net/catalog",
             {
                 headers: {
                     "content-Type": "application/json",
