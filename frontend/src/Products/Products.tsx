@@ -19,6 +19,17 @@ const emptyProducts: Product[] = [];
 function Products() {
     const [products, setProducts]: [Product[], (products: Product[]) => void]
         = useState(emptyProducts);
+
+        useEffect(() => {
+            axios.get<Product[]>("project-vino-api.azurewebsites.net/catalog",
+                {
+                    headers: {
+                        "content-Type": "application/json",
+                    },
+                })
+                .then((response) => setProducts(response.data))
+                .catch((error) => console.log(error));
+        }, []);
     return (
         <div className="content">
             <ul className="products">
@@ -46,16 +57,7 @@ function Products() {
     </div>
     );
     
-    useEffect(() => {
-        axios.get<Product[]>("https://localhost:7250/catalog",
-            {
-                headers: {
-                    "content-Type": "application/json",
-                },
-            })
-            .then((response) => setProducts(response.data))
-            .catch((error) => console.log(error));
-    }, []);
+
 }
 
 export default Products;
